@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrimeApartments | Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <span>🏠 PrimeApartments</span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="listings.html">Listings</a>
+    <a href="agents.html">Agents</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
+  </nav>
+</header>
+
+<section class="section">
+  <div class="section-title">
+    <h2>Contact Us</h2>
+    <p>Book a viewing or ask any question.</p>
+  </div>
+
+  <form id="contactForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="text" placeholder="Phone Number" required>
+    <textarea placeholder="Message..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p id="msg" style="text-align:center;margin-top:15px;font-weight:600;"></p>
+</section>
+
+<footer>
+  <p>© 2022 PrimeApartments | All Rights Reserved</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("msg").innerText = "✅ Message sent! We will contact you soon.";
+  this.reset();
+});
+</script>
+
+</body>
+</html>
